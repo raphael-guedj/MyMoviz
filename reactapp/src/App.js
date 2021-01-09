@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MyMovie from "./components/Movie";
+import Movie from "./components/Movie";
 import "./App.css";
 import {
   Container,
@@ -16,7 +16,7 @@ import {
   ListGroupItem,
 } from "reactstrap";
 
-const App = (props) => {
+const App = () => {
   const [popoverOpen, setPopoverOpen] = useState(false);
   const toggle = () => setPopoverOpen(!popoverOpen);
   const [moviesCount, setMoviesCount] = useState(0);
@@ -90,7 +90,7 @@ const App = (props) => {
     }
 
     return (
-      <MyMovie
+      <Movie
         movieName={movie.title}
         movieDesc={movie.overview}
         movieImg={"http://image.tmdb.org/t/p/w500/" + movie.backdrop_path}
